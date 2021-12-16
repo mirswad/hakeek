@@ -30,7 +30,7 @@
                         <h5 class="mt-3 mb-3">Welcome to Vidoe</h5>
                         <p>It is a long established fact that a reader <br> will be distracted by the readable.</p>
                      </div>
-                     @if($company == 'c')
+                     
                         Company Registration
                         <form action="/register" method="post">
                         @csrf
@@ -127,36 +127,7 @@
                               <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Sign Up</button>
                            </div>
                         </form>
-                     @else
-                        <form action="/register" method="post">
-                        @csrf
-                           <div class="form-group">
-                              <label>Name</label>
-                              <input type="text" class="form-control" name="name" placeholder="Enter Name">
-                                 @foreach($errors->get('name') as $err)
-                                    <small class="text-danger">{{$err}}</small>
-                                 @endforeach
-                           </div>
-                           <div class="form-group">
-                              <label>Email</label>
-                              <input type="email" class="form-control" name="email" placeholder="Email">
-                                 @foreach($errors->get('email') as $err)
-                                    <small class="text-danger">{{$err}}</small>
-                                 @endforeach
-                           </div>
-                           <div class="form-group">
-                              <label>Password</label>
-                              <input type="password" class="form-control" name="password" placeholder="Password">
-                                 @foreach($errors->get('password') as $err)
-                                    <small class="text-danger">{{$err}}</small>
-                                 @endforeach
-                           </div>
-                           
-                           <div class="mt-4">
-                              <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Sign Up</button>
-                           </div>
-                        </form>
-                     @endif
+                    
                      <div class="text-center mt-5">
                         <p class="light-gray">Already have an Account? <a href="login.html">Sign In</a></p>
                      </div>

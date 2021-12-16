@@ -24,7 +24,7 @@ class MainController extends Controller
         $currentURL = \URL::current();
         $check = explode('/', $currentURL);
         if($check[3] == 'c'){
-            return view('main/register', ['company' => true]);
+            return view('main/company_register', ['company' => true]);
         }else{
             return view('main/register', ['company' => false]);
         }
