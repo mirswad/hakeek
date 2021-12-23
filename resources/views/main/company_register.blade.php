@@ -31,7 +31,6 @@
                         <p>It is a long established fact that a reader <br> will be distracted by the readable.</p>
                      </div>
                      
-                        Company Registration
                         <form action="/register" method="post">
                         @csrf
                            <div class="form-group">
@@ -56,7 +55,7 @@
                                  @endforeach
                            </div>
 
-                           <div class="form-group">
+                           <!-- <div class="form-group">
                               <label>Category</label>
                               <select name="categories" class="form-control">
                                  <option value="test">Test</option>
@@ -65,16 +64,7 @@
                                  @foreach($errors->get('email') as $err)
                                     <small class="text-danger">{{$err}}</small>
                                  @endforeach
-                           </div>
-
-                           <div class="form-group">
-                              <label>Address</label>
-                              <textarea class="form-control" name="address" rows="5" cols="10">Address </textarea> 
-                                 @foreach($errors->get('email') as $err)
-                                    <small class="text-danger">{{$err}}</small>
-                                 @endforeach
-                           </div>
-
+                           </div> -->
 
                            <div class="form-group">
                               <label>Country</label>
@@ -96,33 +86,7 @@
                                     <small class="text-danger">{{$err}}</small>
                                  @endforeach
                            </div>
-                           <hr>
-                           <div class="form-group">
-                              <label>Contact Person Name</label>
-                              <input type="text" class="form-control" name="name" placeholder="Contact Person Name">
-                                 @foreach($errors->get('name') as $err)
-                                    <small class="text-danger">{{$err}}</small>
-                                 @endforeach
-                           </div>
-                           <div class="form-group">
-                              <label>Contact Person Phone Number</label>
-                              <input type="text" class="form-control" name="contact_phoenumber" placeholder="Contact Person Phone Number">
-                                 @foreach($errors->get('name') as $err)
-                                    <small class="text-danger">{{$err}}</small>
-                                 @endforeach
-                           </div>
-
-                           <div class="form-group">
-                              <label>Contact Person Position</label>
-                              <select name="position" class="form-control">
-                                 <option value="test">Test</option>
-                                 <option value="test">Test2</option>
-                              </select>
-                                 @foreach($errors->get('country') as $err)
-                                    <small class="text-danger">{{$err}}</small>
-                                 @endforeach
-                           </div>
-                           
+                                                     
                            <div class="mt-4">
                               <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Sign Up</button>
                            </div>
